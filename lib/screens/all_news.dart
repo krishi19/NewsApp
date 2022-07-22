@@ -49,7 +49,6 @@ class _AllNewsState extends State<AllNews> {
             return ListView.separated(
               itemCount: newsList.length,
               padding: EdgeInsets.all(10),
-            
               separatorBuilder: (ctx, index) {
                 return SizedBox(
                   height: 20,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/screens/all_news.dart';
+import 'package:newsapp/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
        
         primaryColor: Colors.white,
       ),
-      home:AllNews(),
+      home:SplashScreen(),
     );
   }
 }

@@ -53,6 +53,26 @@ class NewsDetails extends StatelessWidget {
               height: 20,
             ),
             Text(
+              'Author: ${newsModel.author}',
+              style: TextStyle(
+                color: Colors.blueGrey,
+                fontSize: 14,
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Published At: ${newsModel.publishedAt}',
+              style: TextStyle(
+                color: Colors.blueGrey,
+                fontSize: 10,
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
               newsModel.title,
               style: TextStyle(
                 fontSize: 16,
