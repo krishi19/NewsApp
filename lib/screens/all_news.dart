@@ -18,10 +18,22 @@ class _AllNewsState extends State<AllNews> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
+         centerTitle: true,
           title: Text(' ALL NEWS',
               style: TextStyle(
                 color: Colors.white,
-              ))),
+              )
+              ),
+               flexibleSpace: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: <Color>[ Colors.blue, Colors.white,]),
+      ),
+    ),
+              ),
       body: FutureBuilder<List<NewsModel>>(
           future: NewsRepository().getAllNews(),
           builder: (context, newsSnap) {

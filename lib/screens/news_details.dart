@@ -7,10 +7,19 @@ class NewsDetails extends StatelessWidget {
   final NewsModel newsModel;
   @override
   Widget build(BuildContext context) {
-    print('image : ${newsModel.urlToImage}');
+    // print('image : ${newsModel.urlToImage}');
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('News Detail'),
+        flexibleSpace: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: <Color>[ Colors.blue, Colors.white,]),
+      ),
+    ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(10),
