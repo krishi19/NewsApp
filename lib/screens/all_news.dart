@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:newsapp/model/news_model.dart';
 import 'package:newsapp/repository/news_repository.dart';
 import 'package:newsapp/screens/news_details.dart';
@@ -18,22 +16,23 @@ class _AllNewsState extends State<AllNews> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
-         centerTitle: true,
-          title: Text(' ALL NEWS',
-              style: TextStyle(
-                color: Colors.white,
-              )
-              ),
-               flexibleSpace: Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: <Color>[ Colors.blue, Colors.white,]),
+        centerTitle: true,
+        title: Text(' ALL NEWS',
+            style: TextStyle(
+              color: Colors.white,
+            )),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  Colors.blue,
+                  Colors.white,
+                ]),
+          ),
+        ),
       ),
-    ),
-              ),
       body: FutureBuilder<List<NewsModel>>(
           future: NewsRepository().getAllNews(),
           builder: (context, newsSnap) {

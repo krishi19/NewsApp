@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/screens/all_news.dart';
 import 'package:newsapp/screens/splash.dart';
 
 void main() {
@@ -16,11 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
         primaryColor: Colors.white,
       ),
-      home:SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }
-
